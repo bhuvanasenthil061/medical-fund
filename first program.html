@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Donation Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007BFF;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            background-color: #343a40;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px 8px 0 0;
+            margin-right: 10px;
+        }
+
+        .tab-content {
+            display: none;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #343a40;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Medical Donation Platform</h1>
+        <p1>  HI friends iam jai here , the reason for building this website is to collect medical fund donation for the needy, one of my small help in helping them.
+            So its just a testing website of my dream i'll just make sure that it would be done in a bigger way as i just finish this website building work with a proper paper work and proof.Until then just rate my website which would just tell about your reaction towards
+            this one. Thank you.😊</p1>
+    </header>
+
+    <div class="tabs">
+        <button class="tab" onclick="openTab('donateTab')">Donate</button>
+        <button class="tab" onclick="openTab('contactTab')">Contact</button>
+        <button class="tab" onclick="openTab('AboutTab')">About</button>
+    </div>
+
+    <!-- Donate Tab Content -->
+    <div class="tab-content" id="donateTab">
+        <section>
+            <h2>Help Make a Difference</h2>
+            <p class="content-text">Your support can make a significant impact on the lives of individuals facing medical expenses. Donate today to provide much-needed assistance.</p>
+
+            <form action="your_payment_processing_script.php" method="post">
+                <!-- Your donation form fields go here -->
+                <label for="amount">Donation Amount ($):</label>
+                <input type="number" id="amount" name="amount" required min="1" step="any">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="submit" value="Donate Now">
+            </form>
+        </section>
+    </div>
+
+    <!-- Contact Tab Content -->
+    <div class="tab-content" id="contactTab">
+        <section>
+            <h2>Contact Us</h2>
+            <p class="content-text">If you have any questions or concerns, feel free to reach out to us.</p>
+
+            <form action="your_contact_processing_script.php" method="post">
+                <!-- Your contact form fields go here -->
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+    </div>
+
+    <div class="tab-content" id="AboutTab">
+        <section>
+            <h3>About</h3>
+            <p class="content-text">Ofcourse friends this website is just an outline idea of my dream which would be colourised by your 
+                comments. You can just provide your reviews about this website. Dei then its just a idea not a fully built website.So even though you submit your
+                data it cannot be processed it show no file found ok 👍.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Medical Donation Platform</p>
+    </footer>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabContent;
+            tabContent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
+
